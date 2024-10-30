@@ -1,0 +1,35 @@
+﻿<Window x:Class="podlab02.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:podlab02"
+        mc:Ignorable="d"
+        Title="Матрицы" Height="600" Width="1000">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="450"/>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="450"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="500"/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Row="0" Grid.Column="0" Text="Введите размерность" FontSize="16" Margin="10, 10, 280, 10"/>
+        <TextBox Grid.Row="0" Grid.Column="0" Margin="190,15,245,20" Name="EnterDimensions"/>
+        <Button Grid.Row="0" Grid.Column="0" Margin="220,10,150,15" Content="Создать" Name="Create"/>
+        <ComboBox Grid.Row="2" Grid.Column="2" Margin="10,5,300,20">
+            <TextBlock Text="Умножение" Name="Multiply"/>
+            <TextBlock Text="Сложение" Name="Add"/>
+        </ComboBox>
+        <Button Grid.Row="2" Grid.Column="2" Content="Рассчитать" Margin="170,5,160,20" Name="Result"/>
+        <Button Grid.Row="2" Grid.Column="2" Content="Сохранить" Margin="310,5,10,20" Name="Save"/>
+        <DataGrid Grid.Row="1" Grid.Column="0" Margin="30,55" Name="GridLeft" AutoGenerateColumns="False" IsReadOnly="False"/>
+        <DataGrid Grid.Row="1" Grid.Column="2" Margin="30,55" Name="GridRight" AutoGenerateColumns="False" IsReadOnly="False"/>
+
+
+
+    </Grid>
+</Window>
